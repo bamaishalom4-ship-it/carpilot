@@ -55,6 +55,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A0A0A'/><rect x='52' y='14' width='34' height='34' rx='8' fill='%23C49D00'/><path d='M14 52 C14 71.8823 30.1177 88 50 88 L86 88 C88.2091 88 90 86.2091 90 84 L90 66 C90 63.7909 88.2091 62 86 62 L50 62 C44.4772 62 40 57.5228 40 52 L14 52 Z' fill='%23FFFFFF'/></svg>", type: "image/svg+xml" },
     ],
     shortcut: "/icon.svg",
     apple: "/icon.svg",
