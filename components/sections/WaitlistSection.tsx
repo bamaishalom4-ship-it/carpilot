@@ -37,6 +37,7 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ initialRole = 
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors },
   } = useForm<WaitlistFormData>({
     resolver: zodResolver(waitlistSchema),
@@ -45,6 +46,8 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ initialRole = 
       referred_by: referredByCode,
     },
   });
+
+  const selectedRole = watch("role");
 
   useEffect(() => {
     if (initialRole) {
@@ -208,27 +211,33 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ initialRole = 
                     { id: "customer", label: "Vehicle Owner" },
                     { id: "driver", label: "Professional Driver" },
                     { id: "corporate", label: "Corporate Fleet" },
-                  ].map((r) => (
-                    <label
-                      key={r.id}
-                      className={`
-                        p-3.5 rounded-xl border text-center text-xs font-bold cursor-pointer transition-all duration-200 block select-none
-                        ${
-                          register("role").name === r.id
-                            ? "bg-gold text-black border-gold shadow-gold/20"
-                            : "bg-black/60 text-white border-white/15 hover:border-gold/50"
-                        }
-                      `}
-                    >
-                      <input
-                        type="radio"
-                        value={r.id}
-                        {...register("role")}
-                        className="sr-only"
-                      />
-                      <span>{r.label}</span>
-                    </label>
-                  ))}
+                  ].map((r) => {
+                    const isSelected = selectedRole === r.id;
+                    return (
+                      <label
+                        key={r.id}
+                        className={`
+                          p-3.5 sm:p-4 rounded-xl border text-center text-xs sm:text-sm font-extrabold cursor-pointer transition-all duration-300 block select-none relative overflow-hidden
+                          ${
+                            isSelected
+                              ? "bg-gold text-black border-gold shadow-gold/40 ring-2 ring-gold scale-[1.02]"
+                              : "bg-black/60 text-grey border-white/15 hover:border-gold/50 hover:text-white"
+                          }
+                        `}
+                      >
+                        <input
+                          type="radio"
+                          value={r.id}
+                          {...register("role")}
+                          className="sr-only"
+                        />
+                        <div className="flex items-center justify-center gap-1.5">
+                          {isSelected && <CheckCircle2 className="w-4 h-4 text-black shrink-0" />}
+                          <span>{r.label}</span>
+                        </div>
+                      </label>
+                    );
+                  })}
                 </div>
                 {errors.role && (
                   <p className="text-xs text-red-400 mt-1">{errors.role.message}</p>
