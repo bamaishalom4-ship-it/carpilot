@@ -1,7 +1,7 @@
 import React from "react";
 import { Logo } from "../ui/Logo";
 import { LegalModalType } from "../modals/LegalModal";
-import { Mail, Phone, Globe, Linkedin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Mail, Phone, Globe, Instagram, Facebook, Twitter } from "lucide-react";
 
 interface FooterProps {
   onOpenLegal: (type: LegalModalType) => void;
@@ -109,14 +109,36 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onJoinClick }) => {
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">Connect With Us</h4>
             <div className="flex items-center gap-3">
               {[
-                { label: "LinkedIn", icon: <Linkedin className="w-4 h-4" />, href: "#" },
-                { label: "Instagram", icon: <Instagram className="w-4 h-4" />, href: "#" },
-                { label: "Facebook", icon: <Facebook className="w-4 h-4" />, href: "#" },
-                { label: "X / Twitter", icon: <Twitter className="w-4 h-4" />, href: "#" },
+                {
+                  label: "Facebook",
+                  icon: <Facebook className="w-4 h-4" />,
+                  href: "https://www.facebook.com/share/1BUKPw68MR/?mibextid=wwXIfr",
+                },
+                {
+                  label: "Instagram",
+                  icon: <Instagram className="w-4 h-4" />,
+                  href: "https://www.instagram.com/carpilot__ng",
+                },
+                {
+                  label: "X / Twitter",
+                  icon: <Twitter className="w-4 h-4" />,
+                  href: "https://x.com/carpilot__ng",
+                },
+                {
+                  label: "TikTok",
+                  icon: (
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.83V7.63a6.34 6.34 0 1 0 6.34 6.34V9.07a8.16 8.16 0 0 0 4.77 1.52v-3.9a4.85 4.85 0 0 1-1-.002z" />
+                    </svg>
+                  ),
+                  href: "https://www.tiktok.com/@carpilot__ng",
+                },
               ].map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   className="p-2.5 rounded-xl bg-dark-card border border-white/10 text-grey hover:text-gold hover:border-gold/40 transition-colors"
                 >
