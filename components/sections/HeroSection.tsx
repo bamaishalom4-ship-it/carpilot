@@ -67,7 +67,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onJoinClick }) => {
 
             {/* Tagline */}
             <p className="text-sm font-medium italic text-gold/90">
-              &ldquo;Your journey. Our destination.&rdquo;
+              &ldquo;Every journey in safe hands.&rdquo;
             </p>
 
             {/* Below Fold Badges: 5-Star Visual & City Coverage */}

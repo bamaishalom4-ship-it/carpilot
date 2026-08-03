@@ -13,7 +13,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "Carpilot — Professional Drivers. Trusted Journeys. Complete Peace of Mind.",
   description:
-    "Carpilot connects vehicle owners, families, businesses, and organizations with background-screened professional drivers in Nigeria. Serving Abuja first. Your journey. Our destination.",
+    "Carpilot connects vehicle owners, families, businesses, and organizations with background-screened professional drivers in Nigeria. Serving Abuja first. Every journey in safe hands.",
   keywords: [
     "Carpilot",
     "Professional driver Nigeria",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Carpilot — Professional Drivers. Trusted Journeys.",
     description:
-      "Connecting vehicle owners with background-screened professional drivers in Nigeria. Your journey. Our destination.",
+      "Connecting vehicle owners with background-screened professional drivers in Nigeria. Every journey in safe hands.",
     images: ["/images/carpilot-hero-driver.jpg"],
   },
   robots: {

@@ -84,7 +84,7 @@ export const VerificationFlowSection: React.FC = () => {
         {/* Closing Guarantee Banner */}
         <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-gold/20 via-gold/10 to-gold/20 border border-gold/40 text-center">
           <p className="text-lg sm:text-xl font-bold text-white">
-            &ldquo;Only qualified drivers become Carpilot drivers.&rdquo;
+            &ldquo;Only qualified drivers can be carpilots&rdquo;
           </p>
         </div>
 

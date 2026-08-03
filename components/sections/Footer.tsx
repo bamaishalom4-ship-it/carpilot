@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onJoinClick }) => {
           <div className="lg:col-span-2 space-y-4">
             <Logo variant="combined" size="lg" />
             <p className="text-sm font-medium text-gold italic">
-              &ldquo;Your journey. Our destination.&rdquo;
+              &ldquo;Every journey in safe hands.&rdquo;
             </p>
             <p className="text-xs text-grey max-w-sm leading-relaxed">
               Carpilot is a premium, technology-driven platform connecting vehicle owners, families, and businesses with verified professional drivers across Nigeria.
