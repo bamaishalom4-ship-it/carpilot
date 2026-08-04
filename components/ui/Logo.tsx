@@ -5,6 +5,7 @@ interface LogoProps {
   className?: string;
   showText?: boolean;
   size?: "sm" | "md" | "lg" | "xl";
+  subtext?: string;
 }
 
 /**
@@ -17,6 +18,7 @@ export const Logo: React.FC<LogoProps> = ({
   className = "",
   showText = true,
   size = "md",
+  subtext,
 }) => {
   // Dimensions
   const sizes = {
@@ -59,7 +61,7 @@ export const Logo: React.FC<LogoProps> = ({
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="transition-transform duration-300 hover:scale-105"
+        className="transition-transform duration-300 hover:scale-105 shrink-0"
         aria-label="Carpilot Logo Mark"
       >
         {/* Square Location Marker above */}
@@ -80,11 +82,18 @@ export const Logo: React.FC<LogoProps> = ({
 
       {/* Brand Wordmark "carpilot" */}
       {showText && (
-        <span
-          className={`font-sans font-extrabold tracking-tight ${fontSize} ${textFill}`}
-        >
-          carpilot
-        </span>
+        <div className="flex flex-col">
+          <span
+            className={`font-sans font-extrabold tracking-tight leading-none ${fontSize} ${textFill}`}
+          >
+            carpilot
+          </span>
+          {subtext && (
+            <span className="text-[10px] sm:text-xs font-semibold tracking-wider text-grey uppercase mt-1">
+              {subtext}
+            </span>
+          )}
+        </div>
       )}
     </div>
   );

@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onJoinClick }) => {
           
           {/* Brand & Tagline Column */}
           <div className="lg:col-span-2 space-y-4">
-            <Logo variant="combined" size="lg" />
+            <Logo variant="combined" size="lg" subtext="RC 9575215" />
             <p className="text-sm font-medium text-gold italic">
               &ldquo;Every journey in safe hands.&rdquo;
             </p>
@@ -170,7 +170,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onJoinClick }) => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-grey gap-4">
-          <p>&copy; {new Date().getFullYear()} Carpilot Technologies Limited. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Carpilot Technologies Limited (RC 9575215). All rights reserved.</p>
           <p className="text-grey/60">Designed with precision for Abuja &amp; Nigeria.</p>
         </div>
 
